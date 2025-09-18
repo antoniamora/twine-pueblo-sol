@@ -606,7 +606,7 @@ Abres la puerta de tu habitación y entras. La cama está demasiado bien tendida
 [[Mirar debajo de la cama-&gt;Debajo de la cama]] 
 [[Intentar dormir-&gt;Pesadilla en el hostal]] 
 [[Salir al pasillo-&gt;Pasillo del hostal]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;audio &quot;suspenso_cuerdas&quot; stop&gt;&gt;&lt;&lt;audio &quot;hostal&quot; play loop&gt;&gt; &lt;audio src=&quot;audios/puerta_hostal.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name="Inspeccionar el pueblo" tags="" position="1700,1275" size="100,100">Te acercas con cautela a la calle principal —la única— y miras a tu alrededor.&lt;&lt;set $ubicaciónActual to &quot;Calle&quot;&gt;&gt;
+&lt;&lt;audio &quot;suspenso_cuerdas&quot; stop&gt;&gt;&lt;&lt;audio &quot;hostal&quot; play loop&gt;&gt; &lt;audio src=&quot;audios/puerta_hostal.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name="Inspeccionar el pueblo" tags="" position="1700,1275" size="100,100">Te acercas con cautela a la calle principal y miras a tu alrededor.&lt;&lt;set $ubicaciónActual to &quot;Calle&quot;&gt;&gt;
 
 &#39;&#39;Ubicaciones&#39;&#39;
 
@@ -619,7 +619,7 @@ Abres la puerta de tu habitación y entras. La cama está demasiado bien tendida
 &#39;&#39;Lugar que estás examinando: &#39;&#39; &lt;&lt;print $ubicaciónActual&gt;&gt;
 
 [[Volver y entrar al hostal-&gt;Entrar al hostal]]</tw-passagedata><tw-passagedata pid="21" name="Casas" tags="" position="1575,1150" size="100,100">&lt;&lt;set $ubicaciónActual to &quot;Casas&quot;&gt;&gt;
-Fachadas idénticas se alinean a lo largo de la calle: tablones grises por la humedad, techos inclinados y porches vacíos. Las cortinas pesadas de las ventanas de cada casa esconden lo que ocurre adentro. Da la impresión de que el lugar está abarrotado. Gente ahogando las penas con alcohol, aunque las voces son apenas un murmullo.
+Fachadas idénticas se alinean a lo largo de la calle: tablones deteriorados por la humedad, techos inclinados y porches vacíos. Las cortinas pesadas de las ventanas de cada casa esconden lo que ocurre adentro. Da la impresión de que el lugar está abarrotado. Gente ahogando las penas con alcohol, aunque las voces son apenas un murmullo.
 
 &#39;&#39;Ubicaciones&#39;&#39;
 
@@ -645,7 +645,7 @@ En la esquina, unas puertas de vaivén dejan escapar un chirrido que se mezcla c
 &#39;&#39;Lugar que estás examinando: &#39;&#39; &lt;&lt;print $ubicaciónActual&gt;&gt;
 
 [[Volver y entrar al hostal-&gt;Entrar al hostal]]</tw-passagedata><tw-passagedata pid="23" name="Tienda" tags="" position="1575,1350" size="100,100">&lt;&lt;set $ubicaciónActual to &quot;Tienda&quot;&gt;&gt;
-El escaparate exhibe sacos de harina, apelmazada, latas oxidadas, botellas sin etiqueta y herramientas de hierro viejo. Parece como si nada hubiera sido movido en décadas. Adentro del lugar, lámparas amarillentas iluminan un espacio vacío, el cual apenas parece ser visitado.
+El escaparate exhibe sacos de harina apelmazada, latas oxidadas, botellas sin etiqueta y herramientas de hierro viejo. Parece como si nada hubiera sido movido en décadas. Adentro del lugar, lámparas amarillentas iluminan un espacio vacío, el cual apenas parece ser visitado.
 
 &#39;&#39;Ubicaciones&#39;&#39;
 
@@ -805,7 +805,7 @@ El viento arrastra polvo por el suelo y te sientes completamente solo. Abandonad
 &lt;&lt;timed 22s&gt;&gt;
 [[Acercarte a la iglesia en busca del sacerdote-&gt;Buscar sacerdote]]
 [[Intentar hablar con alguien que viva en el pueblo-&gt;Hablar con alguien]]
-[[Caminar hasta el bar para distraerte-&gt;Caminar hasta el bar]]&lt;&lt;/timed&gt;&gt;
+[[Caminar hasta el bar-&gt;Caminar hasta el bar]]&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;else&gt;&gt;Empujas la puerta principal y el frío de la madrugada te golpea de inmediato. El hostal queda atrás, silencioso, como si nunca hubieses entrado.&lt;&lt;audio &quot;puerta_hostal&quot; play&gt;&gt;
 &lt;&lt;timed 7s&gt;&gt;
@@ -844,7 +844,7 @@ No hay más escapatoria.
 
 [[Salir del hostal-&gt;Salir del hostal]]
 &lt;&lt;set $sobrenatural += 1&gt;&gt;
-&lt;&lt;audio &quot;murmullo&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Buscar sacerdote" tags="" position="1825,1425" size="100,100">Empujas la puerta de la iglesia. El único sonido que rompe el silencio
+&lt;&lt;audio &quot;murmullo&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Buscar sacerdote" tags="" position="1825,1425" size="100,100">Empujas la puerta de la iglesia. Es el único sonido que rompe el silencio.
 &lt;&lt;timed 7s&gt;&gt;&lt;&lt;audio &quot;vela&quot; play&gt;&gt;
 El altar está iluminado por una sola vela, consumiéndose lentamente. El sacerdote no está en ninguna parte.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;
@@ -899,8 +899,8 @@ Entre las notas descubres nombres y fechas. Muchos tachados, otros repetidos una
 Más abajo, una frase se repite en varias hojas:&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 18s&gt;&gt;
 &#39;&#39;Nadie sale de aquí. Nadie recuerda haber llegado.&#39;&#39;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 20s&gt;&gt;
-Tu respiración se acelera. No sabes si el sacerdote dejó estos documentos para ser hallados o si alguien más los escribió pensando en ti.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 20s&gt;&gt;&lt;&lt;audio &quot;respirar_entrecortado&quot; play&gt;&gt;
+Respiras entrecortado. No sabes si el sacerdote dejó estos documentos para ser hallados o si alguien más los escribió pensando en ti.&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 25s&gt;&gt;&lt;&lt;link &quot;Tomar la nota con tu nombre y guardarla&quot;&gt;&gt;&lt;&lt;set $guardarNota to true&gt;&gt;&lt;&lt;goto &quot;Nota iglesia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Dejar la nota donde está&quot;&gt;&gt;&lt;&lt;set $dejarNota to true&gt;&gt;&lt;&lt;goto &quot;Nota iglesia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -931,6 +931,7 @@ Sientes que no deberías permanecer más tiempo frente a ese altar, como si una 
 &lt;&lt;if !$habitaciónIglesia&gt;&gt;[[Alejarte e inspeccionar la habitación del fondo-&gt;Habitación iglesia]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if !$documentosIglesia&gt;&gt;[[Ver los documentos que están esparcidos encima de una mesa-&gt;Documentos iglesia]]&lt;&lt;/if&gt;&gt;
 [[Volver hostal]] &lt;&lt;/timed&gt;&gt;
+&lt;&lt;if !$hablarViejo&gt;&gt;[[Salir de la iglesia y buscar a alguien con quien hablar-&gt;Hablar con alguien]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $cordura -= 3&gt;&gt;&lt;&lt;set $vela to true&gt;&gt;&lt;&lt;audio &quot;vela&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Respuesta conocer" tags="" position="1700,1725" size="100,100">El hombre sonríe apenas, pero no es una sonrisa amable: más bien parece el gesto cansado de alguien que escucha una pregunta por enésima vez.  
 &lt;&lt;timed 7s&gt;&gt;
 //—Todos los viajeros preguntan lo mismo tarde o temprano //—dice, bajando la mirada—.&lt;&lt;/timed&gt;&gt;
@@ -1117,7 +1118,7 @@ Nada ha cambiado.&lt;&lt;/timed&gt;&gt;
 [[Amarrarte los zapatos-&gt;Levantarte hostal]]
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Levantarte hostal" tags="" position="1450,2000" size="100,100">De repente, un crujido al otro lado de la puerta.
 &lt;&lt;timed 3s&gt;&gt;
-Se detiene justo frente a tu puerta. No hay golpe, no hay voz. Solo un silencio absoluto.&lt;&lt;/timed&gt;&gt;
+Se detiene justo enfrente. No hay golpe, no hay voz. Solo un silencio absoluto.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 6s&gt;&gt;&lt;&lt;audio &quot;vela&quot; play&gt;&gt;
 La vela sobre el velador parpadea de pronto, aunque no recuerdas haberla encendido.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 10s&gt;&gt;
@@ -1160,21 +1161,21 @@ De pronto, notas una figura avanzar unos metros más adelante. Tu corazón se de
 [[Seguir al sujeto idéntico a ti-&gt;Seguir doble]]  
 [[Dejarlo ir y dirigirte a la tienda del pueblo-&gt;Ir tienda]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $sobrenatural += 4&gt;&gt;&lt;&lt;set $cordura -= 8&gt;&gt;
-&lt;&lt;audio &quot;hostal&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_cuerdas&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/puerta_hostal.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="58" name="Encuentro sacerdote hostal" tags="" position="1625,2200" size="100,100">Te acercas con cautela. El sacerdote no se mueve hasta que estás a pocos pasos de él.  
-Entonces alza la vista y, con una calma que hiela la sangre, dice:  
-
-//—Hay una ceremonia. Todos deben estar presentes. Tu llegada no es casualidad… Y tampoco tu despertar.//
-
-Extiende una mano como invitación.  
-&lt;div id=&quot;mensajeAviso4&quot;&gt;
+&lt;&lt;audio &quot;hostal&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_cuerdas&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/puerta_hostal.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="58" name="Encuentro sacerdote hostal" tags="" position="1625,2200" size="100,100">Te acercas con cautela. El sacerdote no se mueve hasta que estás a pocos pasos de él.  &lt;&lt;timed 9s&gt;&gt;
+Entonces alza la vista y, con una calma que hiela la sangre, dice:  &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 16s&gt;&gt;
+//—Hay una ceremonia. Todos deben estar presentes. Tu llegada no es casualidad… Y tampoco tu despertar.//&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 23s&gt;&gt;
+Extiende una mano como invitación.  &lt;&lt;/timed&gt;&gt;
+&lt;div id=&quot;mensajeAviso4&quot;&gt;&lt;&lt;timed 26s&gt;&gt;
 &#39;&#39;¿Qué harás?&#39;&#39;
 
 &lt;&lt;link &quot;Aceptar y acompañarlo a la ceremonia&quot;&gt;&gt;&lt;&lt;set $irCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Ir a la ceremonia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-[[Negarte y abandonar el hostal rumbo al pueblo-&gt;Salir del hostal 2]]
-&lt;/div&gt;&lt;div id=&quot;mensajeAviso4&quot;&gt;&lt;/div&gt;&lt;&lt;timed 19s&gt;&gt;
+[[Negarte y abandonar el hostal rumbo al pueblo-&gt;Salir del hostal 2]]&lt;&lt;/timed&gt;&gt;
+&lt;/div&gt;&lt;div id=&quot;mensajeAviso4&quot;&gt;&lt;/div&gt;&lt;&lt;timed 32s&gt;&gt;
 
 &lt;&lt;replace &quot;#mensajeAviso4&quot;&gt;&gt;&#39;&#39;Decide rápido&#39;&#39;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 23s&gt;&gt;&lt;&lt;replace &quot;#mensajeAviso4&quot;&gt;&gt;&lt;&lt;goto &quot;Ir a la ceremonia&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;set $sobrenatural += 3&gt;&gt;
+&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 36s&gt;&gt;&lt;&lt;replace &quot;#mensajeAviso4&quot;&gt;&gt;&lt;&lt;goto &quot;Ir a la ceremonia&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;set $sobrenatural += 3&gt;&gt;
 &lt;&lt;audio &quot;suspenso_cuerdas&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Ir a la ceremonia" tags="" position="1775,2125" size="100,100">&lt;&lt;if $irCeremonia is true&gt;&gt;Asientes finalmente.
 &lt;&lt;timed 2s&gt;&gt;
 El sacerdote te mira fijo y comienza a caminar hacia la iglesia. Incómodamente lo sigues.&lt;&lt;/timed&gt;&gt;
@@ -1289,7 +1290,7 @@ Detrás del mostrador, un hombre de gesto serio acomoda mercancías sin mirarte 
 &lt;&lt;timed 13s&gt;&gt;
 //—Llevamos el tiempo suficiente sin necesitar nada nuevo.//&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 16s&gt;&gt;
-Al moverte entre los estantes, descubres un rincón al fondo, cubierto con una lona. Debajo, hay cajas de velas apiladas junto a una estampa descolorida: una &#39;&#39;ilustración del sol radiante&#39;&#39;, con rayos amarillos que se extienden en todas direcciones.&lt;&lt;/timed&gt;&gt;
+Al moverte entre los estantes, descubres un rincón al fondo, cubierto con una lona. Debajo, hay cajas de velas apiladas junto a una estampa descolorida: una &#39;&#39;ilustración del sol radiante&#39;&#39;, con rayos amarillos que se extienden en todas las direcciones.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 26s&gt;&gt;
 El vendedor se acerca de golpe y te arranca la estampa de las manos.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 32s&gt;&gt;
@@ -1311,7 +1312,7 @@ Allí está el sacerdote, de pie, como si te hubiera estado esperando. El farol 
 //—Es la hora //—dice, sin asombro—.// Ven conmigo.//  &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 31s&gt;&gt;
 &lt;&lt;link &quot;Guardar silencio y seguirlo&quot;&gt;&gt;&lt;&lt;set $seguirCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Llegar a la ceremonia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Encararlo y exigir respuestas&quot;&gt;&gt;&lt;&lt;set $exigirCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Llegar a la ceremonia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Imagen sol tienda" tags="" position="1800,2300" size="100,100">&lt;&lt;if $llave is true&gt;&gt;—No lo nombres. Nadie debe nombrarlo //—afirma con fuerza. El vendedor te mira como si como si le estuvieras faltando el respeto.//&lt;&lt;audio &quot;viejo_enojado&quot; play&gt;&gt;
+&lt;&lt;link &quot;Encararlo y exigir respuestas&quot;&gt;&gt;&lt;&lt;set $exigirCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Llegar a la ceremonia&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Imagen sol tienda" tags="" position="1800,2300" size="100,100">&lt;&lt;if $llave is true&gt;&gt;//—No lo nombres. Nadie debe nombrarlo //—afirma con fuerza. El vendedor te mira como si como si le estuvieras faltando el respeto.&lt;&lt;audio &quot;viejo_enojado&quot; play&gt;&gt;
 &lt;&lt;timed 8s&gt;&gt;
 Su rostro se endurece y desaparece en la trastienda, cerrando la puerta con llave.
 La llave oxidada, la que encontraste en el hostal, cobra presencia en tu bolsillo, como si te exigiera ser usada.&lt;&lt;/timed&gt;&gt;
@@ -1320,7 +1321,7 @@ Podrías intentar abrir la puerta y ver qué oculta.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;
 [[Usar la llave y entrar en la trastienda-&gt;Culto vendedor]]  
 [[Huir del lugar hacia la calle principal-&gt;Calle principal]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;else&gt;&gt;—No lo nombres. Nadie debe nombrarlo //—afirma con fuerza. El vendedor te mira como si como si le estuvieras faltando el respeto.//&lt;&lt;audio &quot;viejo_enojado&quot; play&gt;&gt;
+&lt;&lt;else&gt;&gt;//—No lo nombres. Nadie debe nombrarlo //—afirma con fuerza. El vendedor te mira como si como si le estuvieras faltando el respeto.&lt;&lt;audio &quot;viejo_enojado&quot; play&gt;&gt;
 &lt;&lt;timed 8s&gt;&gt;
 Su rostro se endurece y desaparece en la trastienda, cerrando la puerta con llave. &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 13s&gt;&gt;
@@ -1338,7 +1339,11 @@ Podrías intentar abrir la puerta y ver qué oculta.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 7s&gt;&gt;
 De inmediato toma un candil y lo apaga, dejándote en la penumbra total. Sientes su respiración cerca.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;
-Alcanzas a vislumbrar que se dirige a la trastienda y que cierra la puerta con llave.&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
+Alcanzas a vislumbrar que se dirige a la trastienda y que cierra la puerta con llave.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 21s&gt;&gt;
+Sientes como si su presencia aún te persiguiera.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 26s&gt;&gt;
+[[Huir de la tienda hacia la calle-&gt;Encontrar sacerdote calle]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $negacion +=5&gt;&gt;&lt;&lt;set $cordura -=2&gt;&gt;
 &lt;audio src=&quot;audios/viejo_enojado.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="70" name="Culto vendedor" tags="" position="1925,2300" size="100,100">&lt;&lt;if $inventario.includes(&quot;Llave oxidada&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Llave oxidada&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;La cerradura cede con un chasquido áspero. Abres la puerta y un olor acre de cera y hollín te golpea de inmediato.
 &lt;&lt;timed 6s&gt;&gt;
@@ -1348,8 +1353,8 @@ El hombre nota tu presencia y se sobresalta. Sus ojos brillan de ira y miedo a l
 &lt;&lt;timed 21s&gt;&gt;
 //—¡No debiste ver esto! //—ruge, abalanzándose sobre ti.&lt;&lt;audio &quot;vendedor_grita&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 24s&gt;&gt;
-Agarra tu brazo con una gran fuerza, te arrastra hasta la puerta principal de la tienda y te lanza a la calle, cerrando tras de sí con furia.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 31s&gt;&gt;El portazo resuena como un golpe seco en tu cabeza. La imagen del altar permanece grabada en tu memoria.&lt;&lt;/timed&gt;&gt;&lt;&lt;set $hayLuz += 8&gt;&gt;&lt;&lt;set $entender += 10&gt;&gt;&lt;&lt;set $sobrenatural += 2&gt;&gt;&lt;&lt;set $cordura -=5&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;tienda&quot; play loop&gt;&gt;
+Agarra tu brazo con una gran fuerza, te arrastra hasta la puerta principal de la tienda y te lanza a la calle, cerrando tras de sí.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 31s&gt;&gt;&lt;&lt;audio &quot;cerrar_puerta&quot; play&gt;&gt;La imagen del altar permanece grabada en tu memoria.&lt;&lt;/timed&gt;&gt;&lt;&lt;set $hayLuz += 8&gt;&gt;&lt;&lt;set $entender += 10&gt;&gt;&lt;&lt;set $sobrenatural += 2&gt;&gt;&lt;&lt;set $cordura -=5&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;tienda&quot; play loop&gt;&gt;
 &lt;&lt;timed 36s&gt;&gt;
 [[Recuperar el aliento en la calle principal-&gt;Encontrar sacerdote calle]]&lt;&lt;/timed&gt;&gt;
 &lt;audio src=&quot;audios/abrir_llave.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="71" name="Encontrar sacerdote calle" tags="" position="1700,2550" size="100,100">Las luces del pueblo parecen haberse replegado. Las lámparas de aceite arden con un resplandor irregular y en la madera de los postes chisporrotean insectos atraídos por la luz.  
@@ -1372,7 +1377,7 @@ Caminas tras el sacerdote sin pronunciar palabra. Cada paso tuyo se sincroniza c
 &lt;&lt;timed 7s&gt;&gt;
 Las calles se pliegan una sobre otra y cada cruce termina en el mismo lugar: la iglesia, erguida como un centinela contra la penumbra.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 12s&gt;&gt;
-El sacerdote abre la puerta con gesto solemne.&lt;&lt;/timed&gt;&gt;
+El sacerdote se apoya sobre la puerta.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 14s&gt;&gt;
 //—Es aquí —//afirma.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 16s&gt;&gt;
@@ -1380,7 +1385,7 @@ El sacerdote abre la puerta con gesto solemne.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;else&gt;&gt;
 Suena la campana de la iglesia a la distancia.
 &lt;&lt;timed 2s&gt;&gt;
-//—¿Adónde me llevas? No daré un paso más hasta que me lo diga// —espetas, plantándote en medio del pasaje.&lt;&lt;/timed&gt;&gt;
+//—¿Adónde me lleva? No daré un paso más hasta que me lo diga// —espetas, plantándote en medio del camino.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 7s&gt;&gt;
 El sacerdote inclina la cabeza y deja que el farol ilumine sus facciones como una máscara pétrea.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 12s&gt;&gt;
@@ -1392,7 +1397,7 @@ Sus palabras pesan sobre ti y, aunque aprietas los puños, te descubres caminand
 &lt;&lt;timed 27s&gt;&gt;
 Las calles se pliegan una sobre otra y cada cruce termina en el mismo lugar: la iglesia, erguida como un centinela contra la penumbra.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 31s&gt;&gt;
-El sacerdote abre la puerta con gesto solemne.&lt;&lt;/timed&gt;&gt;
+El sacerdote se apoya sobre la puerta.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 34s&gt;&gt;
 //—Es aquí// —afirma.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 36s&gt;&gt;
@@ -1457,7 +1462,7 @@ Todo te invita a entrar.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 25s&gt;&gt;
 [[Empujar la puerta y entrar-&gt;Entrar casa marcada]]
 [[Retroceder, sin atreverte a entrar-&gt;Calle principal]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $sobrenatural += 2&gt;&gt;&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Ceremonia fondo" tags="" position="2050,2175" size="100,100">&lt;&lt;if $recibirCuaderno is true&gt;&gt; Sin nada en tus manos, solo puedes observar. Las voces del pueblo suben en intensidad, el aire huele a cera y humo, y el círculo ennegrecido del altar palpita con cada palabra del sacerdote. No sabes cuánto tiempo podrás pasar desapercibido.
+&lt;&lt;set $sobrenatural += 2&gt;&gt;&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Ceremonia fondo" tags="" position="2050,2175" size="100,100">&lt;&lt;if $recibirCuaderno is true&gt;&gt;Te ubicas en la parte posterior de la iglesia. Las voces del pueblo suben en intensidad y el círculo ennegrecido del altar palpita con cada palabra del sacerdote. No sabes cuánto tiempo podrás pasar desapercibido.
 &lt;&lt;timed 10s&gt;&gt;
 &lt;&lt;link &quot;Seguir viendo la ceremonia&quot;&gt;&gt;&lt;&lt;set $observarCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Ceremonia altar&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 [[Salir del lugar sin que te vean-&gt;Salir de la iglesia]]&lt;&lt;/timed&gt;&gt;
@@ -1505,26 +1510,7 @@ Ya en el altar, el sacerdote ata tus muñecas con cuerdas ennegrecidas por humo 
 [[Resistirte con todas tus fuerzas-&gt;Final sacrificio]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;audio &quot;coro&quot; play loop&gt;&gt;
-&lt;&lt;set $entender += 5&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Final bucle" tags="" position="2400,2450" size="100,100">Los cantos se apagan de golpe, como si alguien hubiera arrancado de raíz todo sonido del mundo. Parpadeas… Y ya no estás en el altar.  
-&lt;&lt;timed 8s&gt;&gt;
-El traqueteo de un motor te sacude. El olor a bencina y asientos húmedos te envuelve. Frente a ti, la ventana del bus refleja tu rostro cansado.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 16s&gt;&gt;
-Intentas ordenar los recuerdos, pero se escurren entre tus dedos como agua. Lo único que permanece es un dolor agudo en la sien, constante, como un clavo de hielo enterrado en tu cabeza.  &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 26s&gt;&gt;
-Miras tu reloj. La aguja inmóvil marca las 06:42, la misma hora en la que lo viste por primera vez al subirte al bus.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 33s&gt;&gt;
-Afuera, el paisaje se repite idéntico: campos muertos, cercas torcidas, el horizonte sin amanecer. El bus avanza, pero no hacia ningún lado.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 40s&gt;&gt;
-Sabes //—aunque no recuerdas por qué—// que ya has hecho este viaje antes… Y que volverás a hacerlo.&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 47s&gt;&gt;
-El tiempo aquí no camina: gira en círculos, como tú.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 51s&gt;&gt;
-
-&#39;&#39;FIN — El bucle eterno.&#39;&#39;
-
-
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;if $notaBus is true&gt;&gt;Los cantos se apagan de golpe, como si alguien hubiera arrancado de raíz todo sonido del mundo. Parpadeas… Y ya no estás en el altar.  
+&lt;&lt;set $entender += 5&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Final bucle" tags="" position="2400,2450" size="100,100">&lt;&lt;if $notaBus is true&gt;&gt;Los cantos se apagan de golpe, como si alguien hubiera arrancado de raíz todo sonido del mundo. Parpadeas… Y ya no estás en el altar.  
 &lt;&lt;timed 8s&gt;&gt;
 El traqueteo de un motor te sacude. El olor a bencina y asientos húmedos te envuelve. Frente a ti, la ventana del bus refleja tu rostro cansado.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 16s&gt;&gt;
@@ -1540,6 +1526,25 @@ Sabes —aunque no recuerdas por qué— que ya has hecho este viaje antes… Y 
 &lt;&lt;timed 52s&gt;&gt;
 El tiempo aquí no camina: gira en círculos, como tú.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 54s&gt;&gt;
+
+&#39;&#39;FIN — El bucle eterno.&#39;&#39;
+
+
+[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;else&gt;&gt;Los cantos se apagan de golpe, como si alguien hubiera arrancado de raíz todo sonido del mundo. Parpadeas… Y ya no estás en el altar.  
+&lt;&lt;timed 8s&gt;&gt;
+El traqueteo de un motor te sacude. El olor a bencina y asientos húmedos te envuelve. Frente a ti, la ventana del bus refleja tu rostro cansado.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 16s&gt;&gt;
+Intentas ordenar los recuerdos, pero se escurren entre tus dedos como agua. Lo único que permanece es un dolor agudo en la sien, constante, como un clavo de hielo enterrado en tu cabeza.  &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 26s&gt;&gt;
+Miras tu reloj. La aguja inmóvil marca las 06:42, la misma hora en la que lo viste por primera vez al subirte al bus.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 33s&gt;&gt;
+Afuera, el paisaje se repite idéntico: campos muertos, cercas torcidas, el horizonte sin amanecer. El bus avanza, pero no hacia ningún lado.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 40s&gt;&gt;
+Sabes //—aunque no recuerdas por qué—// que ya has hecho este viaje antes… Y que volverás a hacerlo.&lt;&lt;/timed&gt;&gt;  
+&lt;&lt;timed 47s&gt;&gt;
+El tiempo aquí no camina: gira en círculos, como tú.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 51s&gt;&gt;
 
 &#39;&#39;FIN — El bucle eterno.&#39;&#39;
 
@@ -1619,7 +1624,6 @@ Miras alrededor y sabes que no hay escapatoria. Cada vuelta te devuelve hacia la
 La sensación de escape se desvanece: el pueblo no ofrece caminos, solo círculos.&lt;&lt;set $cordura -= 2&gt;&gt;&lt;&lt;set $sobrenatural += 3&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 13s&gt;&gt;
 [[Volver a ingresar a la iglesia-&gt;Ceremonia altar]]
-
 [[Mirar el cielo en búsqueda de respuestas-&gt;Mirar hacia el cielo]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Final cuaderno" tags="" position="1850,2550" size="100,100">&lt;&lt;if $inventario.includes(&quot;Cuaderno del bar&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Cuaderno del bar&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;El silencio es total. El farol apagado yace en el suelo, y la única luz que queda es la que palpita en el cuaderno.  
 &lt;&lt;timed 4s&gt;&gt;
@@ -1765,9 +1769,7 @@ Siempre fuiste parte de este lugar. Quisiste revertir el rito que ocultó al sol
 
 [[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 1&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
-&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Entrar casa marcada" tags="" position="2700,2275" size="100,100">La vivienda parece idéntica a las demás: paredes de madera vieja, ventanas cerradas, la pintura descascarada de la puerta.  
-&lt;&lt;timed 5s&gt;&gt;
-Pero al abrir, sientes el aire cargado. Allí, de pie en la penumbra, hay alguien idéntico a ti. Mismo rostro, misma ropa, incluso el mismo gesto de sorpresa.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Entrar casa marcada" tags="" position="2700,2275" size="100,100">Abres la puerta y allí, de pie en la penumbra, hay alguien idéntico a ti. Mismo rostro, misma ropa, incluso el mismo gesto de sorpresa.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 12s&gt;&gt;
 Por un instante se queda quieto, observándote con tus propios ojos. Luego sonríe torcido y dice:&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 16s&gt;&gt;
@@ -1796,12 +1798,12 @@ Tus dedos rodean su cuello y, mientras él se asfixia, tú sientes que el aire s
 &lt;&lt;timed 30s&gt;&gt;
 Con un último esfuerzo, aprietas hasta que su cuerpo se disuelve en cenizas,  
 como si nunca hubiera estado allí.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 35s&gt;&gt;
+&lt;&lt;timed 35s&gt;&gt;&lt;&lt;audio &quot;doble&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;
 El silencio regresa. Estás solo, pero tu reflejo en la ventana te sonríe por su cuenta.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 39s&gt;&gt;
 [[Salir tambaleante de la casa]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $entender += 10&gt;&gt;&lt;&lt;set $cordura -= 5&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
-&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Salir tambaleante de la casa" tags="" position="2975,2175" size="100,100">La puerta se cierra tras de ti con un chirrido largo. Respiras hondo, intentando recuperar el aire, aunque cada inhalación parece arrastrar cenizas invisibles a tus pulmones.  
+&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/abrir_puerta.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="92" name="Salir tambaleante de la casa" tags="" position="2975,2175" size="100,100">La puerta se cierra tras de ti con un chirrido largo. Respiras hondo, intentando recuperar el aire, aunque cada inhalación parece arrastrar cenizas invisibles a tus pulmones.  
 &lt;&lt;timed 8s&gt;&gt;
 Los vecinos se asoman a las puertas y ventanas. Algunos levantan la mano para saludarte,  otros inclinan apenas la cabeza, como si fueras un rostro conocido desde siempre.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 17s&gt;&gt;
@@ -1824,7 +1826,7 @@ Entonces el sacerdote aparece, paciente, y te acompaña al paradero. El bus siem
 
 
 [[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;&lt;audio &quot;doble&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Escapar casa doppelgänger" tags="" position="2850,2375" size="100,100">El miedo te supera. Retrocedes, mientras tu otro yo avanza hacia ti con calma mortal. 
+&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;audio src=&quot;audios/puerta_cruje.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="93" name="Escapar casa doppelgänger" tags="" position="2850,2375" size="100,100">El miedo te supera. Retrocedes, mientras tu otro yo avanza hacia ti con calma mortal. 
 &lt;&lt;timed 5s&gt;&gt;
 Empujas la puerta con desesperación y sales a la calle, el aire frío golpeándote en la cara como un balde de agua helada.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 12s&gt;&gt;
