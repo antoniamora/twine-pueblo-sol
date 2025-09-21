@@ -383,6 +383,9 @@ Choose wisely.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;cacheaudio &quot;fuego&quot; &quot;audios/fuego.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;suspenso_alza&quot; &quot;audios/suspenso_alza.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;bus_traqueteo&quot; &quot;audios/bus_traqueteo.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;romper_vidrio&quot; &quot;audios/romper_vidrio.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;hombre_pelea&quot; &quot;audios/hombre_pelea.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;sofocar&quot; &quot;audios/sofocar.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;final&quot; &quot;audios/final.mp3&quot;&gt;&gt;
 
 &lt;&lt;run $(document).one(&#39;click keydown&#39;, function () {
@@ -1447,17 +1450,16 @@ You&#39;re left with the feeling that you should be carrying something to guide 
 Your steps lead you back to the church. You feel that this is where you belong.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 17s&gt;&gt;
 [[Get back inside-&gt;Ceremonia altar]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Casa marcada" tags="" position="2525,2300" size="100,100">Llegas a la vivienda señalada en el mapa.
+&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Casa marcada" tags="" position="2525,2300" size="100,100">You arrive at the house marked on the map.
 &lt;&lt;timed 5s&gt;&gt;
-Desde fuera parece idéntica a las demás: paredes de madera vieja, ventanas cerradas, la puerta con pintura descascarada.  &lt;&lt;/timed&gt;&gt;
+From the outside, it looks identical to the others: old wooden walls, closed windows, the door with peeling paint.  &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 13s&gt;&gt;
-Pero algo se siente distinto. Pareciera que la calle entera se inclinara hacia esta casa.  
-Todo te invita a entrar.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 20s&gt;&gt;
-&#39;&#39;Sientes que esta casa guarda un secreto relacionado contigo.&#39;&#39;  &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 25s&gt;&gt;
-[[Empujar la puerta y entrar-&gt;Entrar casa marcada]]
-[[Retroceder, sin atreverte a entrar-&gt;Calle principal]]&lt;&lt;/timed&gt;&gt;
+But something feels different. It seems as if the entire street slopes toward this house. Everything invites you to come in.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 21s&gt;&gt;
+&#39;&#39;You feel that this house holds a secret related to you.&#39;&#39;  &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 26s&gt;&gt;
+[[Push the door and enter-&gt;Entrar casa marcada]]
+[[Back away, not daring to go inside-&gt;Calle principal]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $sobrenatural += 2&gt;&gt;&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;suspenso_calle&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Ceremonia fondo" tags="" position="2050,2175" size="100,100">&lt;&lt;if $recibirCuaderno is true&gt;&gt;You stand at the back of the church. The voices of the people grow louder, and the blackened circle of the altar pulsates with each word spoken by the priest. You don&#39;t know how long you will be able to remain unnoticed.
 &lt;&lt;timed 10s&gt;&gt;
 &lt;&lt;link &quot;Continue watching the ceremony&quot;&gt;&gt;&lt;&lt;set $observarCeremonia to true&gt;&gt;&lt;&lt;goto &quot;Ceremonia altar&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1714,87 +1716,88 @@ But soon the burning becomes unbearable. Your flesh cracks, breaks like dry wood
 [[Try to scape from the light-&gt;Final sombra ardida]]  
 &lt;&lt;if $guardarNota is true&gt;&gt;
 [[Raise the note towards the sky-&gt;Final nombre borrado]]&lt;&lt;/if&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Final consumido luz" tags="" position="2600,1875" size="100,100">La multitud abandona la iglesia y mira en silencio lo que te ocurre, sin intervenir, como si tu muerte fuese parte de la ceremonia.
-&lt;&lt;timed 8s&gt;&gt;
-Decides no resistirte y, cuando el rayo finalmente desaparece, no queda nada de ti.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 14s&gt;&gt;
-El pueblo vuelve a lo suyo y el sacerdote se dirige nuevamente al paradero del bus.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 20s&gt;&gt;
-
-&#39;&#39;FIN — Consumido por la luz.&#39;&#39;
-
-
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $entender +=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt; 
-&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;</tw-passagedata><tw-passagedata pid="88" name="Final sombra ardida" tags="" position="2600,2000" size="100,100">Te revuelves bajo el rayo, gritas, corres intentando escapar, pero la luz te sigue como un juicio personal.
-&lt;&lt;timed 7s&gt;&gt;
-Cada calle que doblas, cada rincón donde intentas ocultarte, el sol te alcanza con precisión mortal.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 13s&gt;&gt;
-Los feligreses abandonan la iglesia y rodean la escena, formando un círculo perfecto. El sacerdote no alza su farol, no dice una palabra: la luz misma hace el trabajo que ellos esperan.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 23s&gt;&gt;
-Tu piel se desprende a jirones y tu sombra se retuerce en el suelo, hasta que deja de parecer humana.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 30s&gt;&gt;
-En el último momento, entiendes la verdad: el sol aquí no es redentor, sino que es el carcelero final.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 37s&gt;&gt;
-Cuando caes, tu silueta queda grabada en la tierra como una marca oscura. Los aldeanos la rodean, en silencio, antes de regresar a la iglesia y quedarse sentados, inmóviles, esperando al próximo viajero.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 47s&gt;&gt;
-
-&#39;&#39;FIN — Sombra ardida.&#39;&#39;
-
-
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt;
-&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Final nombre borrado" tags="" position="2600,2125" size="100,100">&lt;&lt;if $inventario.includes(&quot;Nota con tu nombre&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Nota con tu nombre&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;Con desesperación sacas la nota que llevas contigo, esa hoja húmeda donde tu nombre estaba escrito una y otra vez.
-&lt;&lt;timed 7s&gt;&gt;
-La levantas hacia la luz. De inmediato, las letras empiezan a desvanecerse, como si el sol las devorara una a una.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 14s&gt;&gt;
-Cuando la última línea desaparece, el dolor en tu piel cesa. El rayo se disuelve y las nubes vuelven a cerrar el cielo. Los aldeanos observan en silencio, confundidos.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 22s&gt;&gt;
-El sacerdote aprieta el farol contra el pecho, sin comprender. Miras tus manos: no hay heridas, pero tampoco hay certeza de quién eres.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 30s&gt;&gt;
-No recuerdas tu nombre. No recuerdas haber llegado aquí. El pueblo vuelve a la normalidad a tu alrededor.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 37s&gt;&gt;
-Siempre fuiste parte de este lugar. Quisiste revertir el rito que ocultó al sol y fuiste castigado, aunque tuviste la oportunidad de salvarte... Por ahora.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 45s&gt;&gt;
-
-&#39;&#39;FIN — Nombre borrado.&#39;&#39;
-
-
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 1&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
-&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Entrar casa marcada" tags="" position="2700,2275" size="100,100">Abres la puerta y allí, de pie en la penumbra, hay alguien idéntico a ti. Mismo rostro, misma ropa, incluso el mismo gesto de sorpresa.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 12s&gt;&gt;
-Por un instante se queda quieto, observándote con tus propios ojos. Luego sonríe torcido y dice:&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 16s&gt;&gt;
-//—Solo hay sitio para uno de los dos... Y ese soy yo.//&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 18s&gt;&gt;
-Avanza hacia ti con los puños cerrados, como si el pueblo mismo lo hubiera creado para reemplazarte.&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;doble&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 22s&gt;&gt;&lt;&lt;audio &quot;suspenso_alza&quot; play&gt;&gt;
-&lt;&lt;set $sobrenatural += 4&gt;&gt;&lt;&lt;set $entender +=5&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;  
-[[Enfrentar a tu doble-&gt;Combate doppelgänger]]  
-[[Huir despavorido de la casa-&gt;Escapar casa doppelgänger]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 26s&gt;&gt;
-&#39;&#39;¡Debes decidir ahora!&#39;&#39;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 30s&gt;&gt;
-&lt;&lt;goto &quot;Combate doppelgänger&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;if $inventario.includes(&quot;Mapa&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Mapa&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Combate doppelgänger" tags="" position="2850,2225" size="100,100">Lo empujas hacia adentro de la casa y aprietas los puños. El choque es brutal: es como golpearte a ti mismo contra un espejo de carne.  
-&lt;&lt;timed 8s&gt;&gt;
-Cada impacto que das lo sientes en tu propio cuerpo, como si los golpes fueran compartidos.&lt;&lt;/timed&gt;&gt; 
+&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Final consumido luz" tags="" position="2600,1875" size="100,100">The crowd leaves the church and watches silently as you die, without intervening, as if your death were part of the ceremony.
+&lt;&lt;timed 9s&gt;&gt;
+You decide not to resist, and when the lightning finally disappears, nothing remains of you.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;
-El sujeto ríe con tu misma voz, entrecortada por la furia:&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 18s&gt;&gt;
-//—No puedes existir si yo existo.//&lt;&lt;/timed&gt;&gt;
+The townspeople go back to their business, and the priest heads back to the bus stop.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 21s&gt;&gt;
-La pelea destroza muebles, hace crujir las paredes. En un instante logras derribarlo, tu rodilla sobre su pecho.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 26s&gt;&gt;
-Tus dedos rodean su cuello y, mientras él se asfixia, tú sientes que el aire se te va también.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 30s&gt;&gt;
-Con un último esfuerzo, aprietas hasta que su cuerpo se disuelve en cenizas,  
-como si nunca hubiera estado allí.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 35s&gt;&gt;&lt;&lt;audio &quot;doble&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;
-El silencio regresa. Estás solo, pero tu reflejo en la ventana te sonríe por su cuenta.&lt;&lt;/timed&gt;&gt;
+
+&#39;&#39;END — Consumed by light.&#39;&#39;
+
+
+[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $entender +=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt; 
+&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;</tw-passagedata><tw-passagedata pid="88" name="Final sombra ardida" tags="" position="2600,2000" size="100,100">You writhe under the lightning bolt, scream, run trying to escape, but the light follows you like a personal judgment.
+&lt;&lt;timed 9s&gt;&gt;
+Every street you turn, every corner you try to hide in, the sun reaches you with deadly precision.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 16s&gt;&gt;
+The parishioners leave the church and surround the scene, forming a perfect circle.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 22s&gt;&gt;
+The priest does not raise his lantern, does not say a word: the light itself does the work they expect.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 29s&gt;&gt;
+Your skin peels off in shreds and your shadow writhes on the ground until it no longer looks human.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 37s&gt;&gt;
+At the last moment, you understand the truth: the sun here is not redeeming, but rather the ultimate jailer.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 45s&gt;&gt;
+When you fall, your silhouette is imprinted on the ground like a dark mark. The villagers surround it, silently, before returning to the church and sitting motionless, waiting for the next traveler.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 55s&gt;&gt;
+
+&#39;&#39;END — Burning shadow.&#39;&#39;
+
+
+[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt;
+&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/hombre_grita.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="89" name="Final nombre borrado" tags="" position="2600,2125" size="100,100">&lt;&lt;if $inventario.includes(&quot;Nota con tu nombre&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Nota con tu nombre&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;In desperation, you pull out the note you carry with you, that damp piece of paper where your name was written over and over again.
+&lt;&lt;timed 8s&gt;&gt;
+You hold it up to the light. Immediately, the letters begin to fade, as if the sun were devouring them one by one.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 16s&gt;&gt;
+When the last line disappears, the pain on your skin ceases. The lightning dissolves and the clouds close the sky once more. The villagers watch in silence, confused.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 24s&gt;&gt;
+The priest presses the lantern to his chest, not understanding. You look at your hands: there are no wounds, but there is also no certainty of who you are.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 32s&gt;&gt;
+You don&#39;t remember your name. You don&#39;t remember how you got here. Life returns to normal around you.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 39s&gt;&gt;
-[[Salir tambaleante de la casa]]&lt;&lt;/timed&gt;&gt;
+You were always part of this place. You wanted to reverse the ritual that hid the sun, and you were punished, even though you had the chance to save yourself... For now.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 48s&gt;&gt;
+
+&#39;&#39;END — Name erased.&#39;&#39;
+
+
+[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 1&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
+&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Entrar casa marcada" tags="" position="2700,2275" size="100,100">You open the door and there, standing in the shadows, is someone identical to you. Same face, same clothes, even the same look of surprise.
+&lt;&lt;timed 10s&gt;&gt;
+For a moment, he stands still, looking at you with your own eyes. Then he smiles crookedly and says:&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 17s&gt;&gt;
+//—There&#39;s only room for one of us... And that&#39;s me.//&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 21s&gt;&gt;
+It advances toward you with clenched fists, as if the people themselves had created it to replace you.&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;doble&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+&lt;&lt;timed 28s&gt;&gt;&lt;&lt;audio &quot;suspenso_alza&quot; play&gt;&gt;
+&lt;&lt;set $sobrenatural += 4&gt;&gt;&lt;&lt;set $entender +=5&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;  
+[[Confront your double-&gt;Combate doppelgänger]]  
+[[Run away terrified-&gt;Escapar casa doppelgänger]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 33s&gt;&gt;
+&#39;&#39;You must decide now!&#39;&#39;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 37s&gt;&gt;
+&lt;&lt;goto &quot;Combate doppelgänger&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;if $inventario.includes(&quot;Mapa&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Mapa&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Combate doppelgänger" tags="" position="2850,2225" size="100,100">You push him inside the house and clench your fists. The impact is brutal: it&#39;s like hitting yourself against a mirror made of flesh.  
+&lt;&lt;timed 9s&gt;&gt;
+Every blow you strike is felt in your own body, as if the blows were shared.&lt;&lt;/timed&gt;&gt; 
+&lt;&lt;timed 15s&gt;&gt;
+The subject laughs with your own voice, broken by rage:&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 20s&gt;&gt;
+//—You can&#39;t exist if I exist.//&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 23s&gt;&gt;&lt;&lt;audio &quot;romper_vidrio&quot; play loop&gt;&gt;&lt;&lt;audio &quot;hombre_pelea&quot; play loop&gt;&gt;
+The fight destroys everything and turns the whole house upside down. In an instant, you manage to knock him down, your knee on his chest.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;audio &quot;romper_vidrio&quot; stop&gt;&gt;&lt;&lt;audio &quot;hombre_pelea&quot; stop&gt;&gt;&lt;&lt;audio &quot;sofocar&quot; play&gt;&gt;
+Your fingers wrap around his neck, and as he suffocates, you feel the air leaving you too.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 37s&gt;&gt;
+With one last effort, you squeeze until his body dissolves into ashes, as if he had never been there.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 44s&gt;&gt;&lt;&lt;audio &quot;doble&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;
+Silence returns. You are alone, but your reflection in the window smiles at you on its own.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 50s&gt;&gt;
+[[Stumble out of the house-&gt;Salir tambaleante de la casa]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $entender += 10&gt;&gt;&lt;&lt;set $cordura -= 5&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
 &lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/abrir_puerta.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="92" name="Salir tambaleante de la casa" tags="" position="2975,2175" size="100,100">La puerta se cierra tras de ti con un chirrido largo. Respiras hondo, intentando recuperar el aire, aunque cada inhalación parece arrastrar cenizas invisibles a tus pulmones.  
 &lt;&lt;timed 8s&gt;&gt;
@@ -1819,17 +1822,17 @@ Entonces el sacerdote aparece, paciente, y te acompaña al paradero. El bus siem
 
 
 [[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;audio src=&quot;audios/puerta_cruje.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="93" name="Escapar casa doppelgänger" tags="" position="2850,2375" size="100,100">El miedo te supera. Retrocedes, mientras tu otro yo avanza hacia ti con calma mortal. 
-&lt;&lt;timed 5s&gt;&gt;
-Empujas la puerta con desesperación y sales a la calle, el aire frío golpeándote en la cara como un balde de agua helada.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 12s&gt;&gt;
-Desde el umbral, tu doble se queda mirándote, inmóvil, su silueta clavada contra la penumbra de la casa marcada.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 18s&gt;&gt;
-No te sigue: no lo necesita.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 21s&gt;&gt;
-Sabes que mientras él esté ahí, tarde o temprano ocupará tu lugar.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 25s&gt;&gt;
-[[Correr en busca de ayuda-&gt;Buscar ayuda doppelgänger]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;audio src=&quot;audios/puerta_cruje.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="93" name="Escapar casa doppelgänger" tags="" position="2850,2375" size="100,100">Fear overwhelms you. You retreat, while your other self advances toward you with deadly calm. 
+&lt;&lt;timed 7s&gt;&gt;
+You push the door open desperately and step out onto the street, the cold air hitting your face like a bucket of ice water.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;
+From the doorway, your double stands watching you, motionless, its silhouette silhouetted against the darkness of the marked house.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 23s&gt;&gt;
+He doesn&#39;t follow you: he doesn&#39;t need to.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 28s&gt;&gt;
+You know that as long as he&#39;s there, sooner or later he&#39;ll take your place.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 33s&gt;&gt;
+[[Run for help-&gt;Buscar ayuda doppelgänger]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $cordura -= 5&gt;&gt;&lt;&lt;set $sobrenatural += 5&gt;&gt;
 &lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Buscar ayuda doppelgänger" tags="" position="2975,2500" size="100,100">El aire de la calle te golpea de lleno, pero no trae alivio. Desde las casas, los vecinos comienzan a salir uno a uno, llenando la calle con pasos pesados y miradas vacías.  
 &lt;&lt;timed 9s&gt;&gt;
