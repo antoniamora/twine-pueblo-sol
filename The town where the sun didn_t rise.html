@@ -275,7 +275,7 @@ window.mostrarInventario = function () {
   const items = State.variables.inventario || [];
 
   if (items.length === 0) {
-    ul.innerHTML = "<li>Tu inventario está vacío.</li>";
+    ul.innerHTML = "<li>Your inventory is empty.</li>";
   } else {
     items.forEach(it => {
       const li = document.createElement("li");
@@ -295,11 +295,11 @@ window.mostrarInventario = function () {
       overlay.id = 'inventario-overlay';
       overlay.innerHTML = `
         <div id="inventario-box">
-          <h2>Inventario</h2>
+          <h2>Inventory</h2>
           <ul id="inventario-list"></ul>
           <button id="btn-cerrar"
             onclick="document.getElementById('inventario-overlay').style.display='none'">
-            Cerrar
+            Close
           </button>
         </div>`;
       document.body.appendChild(overlay);
@@ -309,7 +309,7 @@ window.mostrarInventario = function () {
     if (!document.getElementById('btn-inventario')) {
       const btn = document.createElement('button');
       btn.id = 'btn-inventario';
-      btn.textContent = 'Inventario';
+      btn.textContent = 'Inventory';
       btn.onclick = window.mostrarInventario;
       document.body.appendChild(btn);
     }
@@ -325,7 +325,7 @@ Choose wisely.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 6s&gt;&gt;
 [[START-&gt;Comenzar viaje bus]]
 
-(Para una experiencia inmersiva, ocupa audífonos)
+(For an immersive experience, use headphones.)
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;audio &quot;final&quot; stop&gt;&gt;
 &lt;&lt;set $inventario to []&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="1500,775" size="100,100">&lt;&lt;set $hayLuz = 0&gt;&gt;
@@ -410,7 +410,7 @@ You have more questions than answers, so perhaps the wisest thing to do is to ap
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;audio &quot;glass&quot; play&gt;&gt;&lt;&lt;set $hayLuz += 2&gt;&gt;
-</tw-passagedata><tw-passagedata pid="5" name="Hablar con el conductor" tags="" position="1225,900" size="100,100">You get up. You grab your suitcase and walk down the hallway.&lt;&lt;audio &quot;caminar&quot; play loop&gt;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="Hablar con el conductor" tags="" position="1225,900" size="100,100">You get up, grab your suitcase and walk down the hallway.&lt;&lt;audio &quot;caminar&quot; play loop&gt;&gt;
 &lt;&lt;timed 7s&gt;&gt;
 As you approach the driver, you hear him say:&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 14s&gt;&gt;
@@ -440,8 +440,8 @@ Interesting... Will it be of any use?&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 20s&gt;&gt;
 	[[Pick up the map-&gt;Recoger el mapa]]
     [[Leave it where it is-&gt;Dejarlo donde está]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 16s&gt;&gt;&#39;&#39;Quickly decide what to do before the driver notices!&#39;&#39;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 21s&gt;&gt;&lt;&lt;goto &quot;Recoger el mapa&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Recoger el mapa" tags="" position="1800,775" size="100,100">You pretend to tie your shoes and slowly approach his seat.
+&lt;&lt;timed 24s&gt;&gt;&#39;&#39;Quickly decide what to do before the driver notices!&#39;&#39;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 27s&gt;&gt;&lt;&lt;goto &quot;Recoger el mapa&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Recoger el mapa" tags="" position="1800,775" size="100,100">You pretend to tie your shoes and slowly approach his seat.
 &lt;&lt;timed 6s&gt;&gt;
 	&lt;&lt;link &quot;Reach out to grab the paper&quot;&gt;&gt;&lt;&lt;set $dejarMapa to true&gt;&gt;&lt;&lt;set $casaMapa to true&gt;&gt;&lt;&lt;goto &quot;Dejarlo donde está&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 	&lt;&lt;link &quot;This is very risky. Better not to continue&quot;&gt;&gt;&lt;&lt;goto &quot;Dejarlo donde está&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -457,7 +457,7 @@ Yes. This is your destiny.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 28s&gt;&gt;
 [[Grab your suitcase and carefully go downstairs.-&gt;Llegaste]]
 [[Stay still-&gt;Quedarte quieto bus]]&lt;&lt;/timed&gt;&gt;
-&lt;&lt;else&gt;&gt;You give up.
+&lt;&lt;else&gt;&gt;You desist.
 &lt;&lt;timed 2s&gt;&gt;
 You sit up, pretending to be calm so as not to arouse suspicion. The driver looks at you in the rearview mirror and you smile shyly.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 12s&gt;&gt;&lt;&lt;audio &quot;frenar&quot; play&gt;&gt;
@@ -563,7 +563,7 @@ The priest warned you. You should have listened to him.&lt;&lt;/timed&gt;&gt;
 &#39;&#39;END — Death by wolf attack&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;audio src=&quot;audios/lobo_grune.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="17" name="Consecuencias final" tags="" position="2200,775" size="100,100">Level of light identified: $hayLuz (ou started at 0)
 Level of denial of the sun&#39;s existence: $negacion (you started at 0)
 Level of connection to the supernatural: $sobrenatural (you started at 0)
@@ -726,18 +726,18 @@ You breathe heavily and reach out your hand. Your fingers brush against somethin
 &lt;audio src=&quot;audios/pisar.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="29" name="StoryHeader" tags="nobr" position="1500,675" size="100,100">&lt;!-- Overlay de inventario --&gt;
 &lt;div id=&quot;inventario-overlay&quot;&gt;
   &lt;div id=&quot;inventario-box&quot;&gt;
-    &lt;h2&gt;Inventario&lt;/h2&gt;
+    &lt;h2&gt;Inventory&lt;/h2&gt;
     &lt;ul id=&quot;inventario-list&quot;&gt;&lt;/ul&gt;
     &lt;button
       id=&quot;btn-cerrar&quot;
       onclick=&quot;document.getElementById(&#39;inventario-overlay&#39;).style.display=&#39;none&#39;&quot;&gt;
-      Cerrar
+      Close
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;!-- Botón flotante --&gt;
-&lt;button id=&quot;btn-inventario&quot; onclick=&quot;window.mostrarInventario()&quot;&gt;Inventario&lt;/button&gt;
+&lt;button id=&quot;btn-inventario&quot; onclick=&quot;window.mostrarInventario()&quot;&gt;Inventory&lt;/button&gt;
 
 </tw-passagedata><tw-passagedata pid="30" name="Inventario" tags="" position="1600,675" size="100,100">&lt;&lt;if $inventario.length == 0&gt;&gt;
 	Your inventory is empty.
@@ -756,7 +756,7 @@ You breathe heavily and reach out your hand. Your fingers brush against somethin
 		&lt;&lt;goto $volver&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="31" name="PassageHeader" tags="" position="1400,675" size="100,100">&lt;&lt;if not (passage() is &quot;StoryInit&quot; or passage() is &quot;StoryMenu&quot; or passage() is &quot;Inventario&quot;)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="PassageHeader" tags="" position="1400,675" size="100,100">&lt;&lt;if not (passage() is &quot;StoryInit&quot; or passage() is &quot;StoryMenu&quot; or passage() is &quot;Inventory&quot;)&gt;&gt;
 	&lt;&lt;set $volver = passage()&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="32" name="Pesadilla en el hostal" tags="" position="2100,1200" size="100,100">You lie down on the bed. The sheets are cold and stiff, as if no one had used them in years.
@@ -830,7 +830,7 @@ The last image you see is the hallway receding. Finally, the door slams shut and
 &#39;&#39;END - You have been captured by a supernatural creature.&#39;&#39;
 &lt;&lt;audio &quot;hostal&quot; stop&gt;&gt;
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;audio src=&quot;audios/llave.mp3&quot; autoplay&gt;&lt;/audio&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;&lt;&lt;audio &quot;hostal&quot; stop&gt;&gt;&lt;&lt;audio &quot;murmullo&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Otro pasillo hostal" tags="" position="2250,1500" size="100,100">The corridor stretches out identically to the previous one: closed doors, flickering lights, the same smell of damp wood.  
 &lt;&lt;timed 9s&gt;&gt;
 But something is out of place. Every detail seems like a poorly made duplicate of the hallway you just walked through.&lt;&lt;/timed&gt;&gt;
@@ -1527,7 +1527,7 @@ Time here does not move forward: it goes round in circles, just like you.&lt;&lt
 &#39;&#39;END — The eternal loop.&#39;&#39;
 
 
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;else&gt;&gt;The singing stops abruptly, as if someone had ripped every sound from the world. You blink... And you are no longer at the altar.  
 &lt;&lt;timed 8s&gt;&gt;
 The rattling of an engine shakes you. The smell of gasoline and damp seats envelops you. In front of you, the bus window reflects your tired face.&lt;&lt;/timed&gt;&gt;
@@ -1546,7 +1546,7 @@ Time here does not move forward: it goes round in circles, just like you.&lt;&lt
 &#39;&#39;END — The eternal loop.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;audio &quot;coro&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;&lt;&lt;audio &quot;bus_traqueteo&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Final sacrificio" tags="" position="2400,2600" size="100,100">The ropes tighten and the priest brings the unlit lantern close to your body. With a barely audible murmur, he lights it with a snap.  
 &lt;&lt;timed 8s&gt;&gt;
@@ -1567,10 +1567,10 @@ And that&#39;s when you understand: every sacrifice feeds the eternity of the pe
 Now, at this very moment, it&#39;s you who illuminates them.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 59s&gt;&gt;
 
-&#39;&#39;FIN — El sacrificio del sol.&#39;&#39;
+&#39;&#39;END — The sacrifice of the sun.&#39;&#39;
 
 
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;if $inventario.includes(&quot;Nota con tu nombre&quot;)&gt;&gt;Amidst the flames, the note with your name ignites on its own. The crossings-out disappear one by one, until only the last line remains intact.
 &lt;&lt;timed 8s&gt;&gt;
 Your name shines brightly for a moment, before burning to ashes along with you.&lt;&lt;/timed&gt;&gt;
@@ -1587,7 +1587,7 @@ Now, at this very moment, it&#39;s you who illuminates them.&lt;&lt;/timed&gt;&g
 &#39;&#39;END — The sacrifice of the sun.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;audio &quot;coro&quot; play loop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="Levantar cuaderno" tags="" position="1925,2175" size="100,100">The chant stops abruptly.
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;suspenso_piano&quot; play&gt;&gt;
@@ -1653,7 +1653,7 @@ There is no sun, no darkness. Only absolute solitude that no one will ever inter
 &#39;&#39;END — The broken pact.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;
 &lt;&lt;audio &quot;final&quot; play loop&gt;&gt;&lt;&lt;audio &quot;suspenso_piano&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Invocar al sol ausente" tags="" position="1925,2675" size="100,100">//—A pen! //—you demand, and a trembling parishioner leaves it in your hands, as if he already knew what would happen.
 &lt;&lt;timed 8s&gt;&gt;
@@ -1701,7 +1701,7 @@ You are the last witness to the sun that returned and to a people who chose dark
 &#39;&#39;END — Invoke the absent sun.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;audio &quot;suspenso_piano&quot; stop&gt;&gt;&lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Mirar hacia el cielo" tags="" position="2425,2075" size="100,100">You look up at the sky, wishing you could understand or perhaps simply disappear from this madness.  
 &lt;&lt;timed 7s&gt;&gt;
 Then, it happens.&lt;&lt;/timed&gt;&gt;  
@@ -1726,9 +1726,9 @@ The townspeople go back to their business, and the priest heads back to the bus 
 &#39;&#39;END — Consumed by light.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $entender +=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt; 
-&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;</tw-passagedata><tw-passagedata pid="88" name="Final sombra ardida" tags="" position="2600,2000" size="100,100">You writhe under the lightning bolt, scream, run trying to escape, but the light follows you like a personal judgment.
+&lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Final sombra ardida" tags="" position="2600,2000" size="100,100">You writhe under the lightning bolt, scream, run trying to escape, but the light follows you like a personal judgment.
 &lt;&lt;timed 9s&gt;&gt;
 Every street you turn, every corner you try to hide in, the sun reaches you with deadly precision.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 16s&gt;&gt;
@@ -1746,7 +1746,7 @@ When you fall, your silhouette is imprinted on the ground like a dark mark. The 
 &#39;&#39;END — Burning shadow.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;&lt;set $sobrenatural +=10&gt;&gt;
 &lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/hombre_grita.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="89" name="Final nombre borrado" tags="" position="2600,2125" size="100,100">&lt;&lt;if $inventario.includes(&quot;Nota con tu nombre&quot;)&gt;&gt;&lt;&lt;run $inventario.splice($inventario.indexOf(&quot;Nota con tu nombre&quot;), 1)&gt;&gt;&lt;&lt;/if&gt;&gt;In desperation, you pull out the note you carry with you, that damp piece of paper where your name was written over and over again.
 &lt;&lt;timed 8s&gt;&gt;
@@ -1764,7 +1764,7 @@ You were always part of this place. You wanted to reverse the ritual that hid th
 &#39;&#39;END — Name erased.&#39;&#39;
 
 
-[[Know the consequences of your decisions-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $hayLuz +=30&gt;&gt;&lt;&lt;set $cordura -= 1&gt;&gt;&lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
 &lt;&lt;audio &quot;suspenso_calle&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Entrar casa marcada" tags="" position="2700,2275" size="100,100">You open the door and there, standing in the shadows, is someone identical to you. Same face, same clothes, even the same look of surprise.
 &lt;&lt;timed 10s&gt;&gt;
@@ -1799,29 +1799,33 @@ Silence returns. You are alone, but your reflection in the window smiles at you 
 &lt;&lt;timed 50s&gt;&gt;
 [[Stumble out of the house-&gt;Salir tambaleante de la casa]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $entender += 10&gt;&gt;&lt;&lt;set $cordura -= 5&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;
-&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/abrir_puerta.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="92" name="Salir tambaleante de la casa" tags="" position="2975,2175" size="100,100">La puerta se cierra tras de ti con un chirrido largo. Respiras hondo, intentando recuperar el aire, aunque cada inhalación parece arrastrar cenizas invisibles a tus pulmones.  
-&lt;&lt;timed 8s&gt;&gt;
-Los vecinos se asoman a las puertas y ventanas. Algunos levantan la mano para saludarte,  otros inclinan apenas la cabeza, como si fueras un rostro conocido desde siempre.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;&lt;audio src=&quot;audios/abrir_puerta.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="92" name="Salir tambaleante de la casa" tags="" position="2975,2175" size="100,100">The door closes behind you with a long creak. You take a deep breath, trying to catch your breath, even though each inhalation seems to drag invisible ashes into your lungs.  
+&lt;&lt;timed 10s&gt;&gt;
+Neighbors peek out of doors and windows. Some raise their hands to greet you, others barely nod their heads, as if you were a familiar face from long ago.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 17s&gt;&gt;
-Sonríen con naturalidad, sin rastro de sospecha. Nadie pregunta por los ruidos, por los golpes, ni por la pelea que dejó la casa hecha ruinas.&lt;&lt;/timed&gt;&gt;
+They smile naturally, without a trace of suspicion. No one asks about the noises, the blows, or the fight that left the house in ruins.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 24s&gt;&gt;
-Sus miradas te atraviesan con tranquila familiaridad. Y entonces lo entiendes: aquí nunca llega gente nueva.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 30s&gt;&gt;
-Lo que viste y golpeaste en esa casa no era otro. Eras tú, proyectado en la penumbra del pueblo.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 36s&gt;&gt;
-Cada cierto tiempo, los habitantes fingen que eres un viajero. Te inventan una historia para mantenerte a raya, para que creas que todavía eres alguien de paso.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 43s&gt;&gt;
-En este pueblo nunca sale el sol. En su momento, trataste de buscar respuestas, pero no lo lograste.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 49s&gt;&gt;
-Por lo mismo, tarde o temprano, la locura te consume, y olvidarlo todo es la única salida.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 54s&gt;&gt;
-Entonces el sacerdote aparece, paciente, y te acompaña al paradero. El bus siempre llega. Da una sola vuelta y retorna al mismo lugar.&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 60s&gt;&gt;
+Their gazes pierce you with quiet familiarity. And then you understand: new people never come here.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 31s&gt;&gt;
+What you saw and struck in that house was none other than yourself. It was you, projected into the darkness of the town.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 38s&gt;&gt;
+Every so often, the locals pretend you&#39;re a traveler. They make up a story to keep you at bay, to make you believe you&#39;re still just passing through.
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 44s&gt;&gt;
+The sun never rises in this town. You tried to find answers once, but you couldn&#39;t.
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 50s&gt;&gt;
+For this reason, sooner or later, madness consumes you, and forgetting everything is the only way out.
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 57s&gt;&gt;
+Then the priest appears, patiently, and escorts you to the bus stop. The bus always arrives. It makes just one loop and returns to the same place.
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 64s&gt;&gt;
 
-&#39;&#39;FIN - La locura es tu motor principal.&#39;&#39;
+&#39;&#39;END - Madness is your main engine.&#39;&#39;
 
 
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $entender += 30&gt;&gt;&lt;&lt;set $cordura -=10&gt;&gt;&lt;audio src=&quot;audios/puerta_cruje.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="93" name="Escapar casa doppelgänger" tags="" position="2850,2375" size="100,100">Fear overwhelms you. You retreat, while your other self advances toward you with deadly calm. 
 &lt;&lt;timed 7s&gt;&gt;
 You push the door open desperately and step out onto the street, the cold air hitting your face like a bucket of ice water.&lt;&lt;/timed&gt;&gt;
@@ -1834,30 +1838,32 @@ You know that as long as he&#39;s there, sooner or later he&#39;ll take your pla
 &lt;&lt;timed 33s&gt;&gt;
 [[Run for help-&gt;Buscar ayuda doppelgänger]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $cordura -= 5&gt;&gt;&lt;&lt;set $sobrenatural += 5&gt;&gt;
-&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Buscar ayuda doppelgänger" tags="" position="2975,2500" size="100,100">El aire de la calle te golpea de lleno, pero no trae alivio. Desde las casas, los vecinos comienzan a salir uno a uno, llenando la calle con pasos pesados y miradas vacías.  
+&lt;&lt;audio &quot;doble&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Buscar ayuda doppelgänger" tags="" position="2975,2500" size="100,100">The air outside hits you hard, but it brings no relief. Neighbors begin to emerge one by one from their houses, filling the street with heavy footsteps and blank stares. 
 &lt;&lt;timed 9s&gt;&gt;
-Tratas de pedirles ayuda, pero notas que se posicionan alrededor tuyo, en silencio,  
-mirándolo a él: la figura quieta en el umbral de la casa marcada.&lt;&lt;/timed&gt;&gt;
+You try to ask them for help, but you notice they stand around you, silent,
+looking at him: the still figure on the threshold of the marked house.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 17s&gt;&gt;
-Tu doble no avanza, no lo necesita. Los demás lo harán por él.&lt;&lt;/timed&gt;&gt;
+Your double doesn&#39;t advance, he doesn&#39;t need to. Others will do it for him.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 22s&gt;&gt;
-El sacerdote aparece entre la multitud, farol en mano. Su voz retumba con calma:&lt;&lt;/timed&gt;&gt;
+The priest appears among the crowd, lantern in hand. His voice resonates calmly:&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 28s&gt;&gt;
-//—Te lo dije. A este pueblo nunca llega gente nueva. Y como ya ves, no puede haber dos.//&lt;&lt;/timed&gt;&gt;
+//—I told you so. New people never arrive to this town. And, as you can see, there can&#39;t be two.//&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 34s&gt;&gt;&lt;&lt;audio &quot;hombre_grita&quot; play&gt;&gt;
-Gritas por ayuda, pero nadie corre a tu rescate.&lt;&lt;/timed&gt;&gt;
+You scream for help, but no one runs to your rescue.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 37s&gt;&gt;
-El círculo de cuerpos se estrecha hasta ahogarte. Sientes cómo sus manos absorben tu calor, cómo tu cuerpo se vacía hasta no dejar más que polvo brillante.&lt;&lt;/timed&gt;&gt;
+The circle of bodies tightens until you&#39;re suffocating. You feel their hands absorbing your warmth, your body draining away until nothing remains but glittering dust.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 44s&gt;&gt;
-En el instante final, lo comprendes: el sol nunca aparece porque su fuerza está aquí, en la penumba eterna. En la vida de un pueblo que solo se mantiene en la oscuridad y que no acepta forasteros. Que no acepta a nadie que trate de romper el cielo.&lt;&lt;/timed&gt;&gt;
+In the final moment, you understand: the sun never appears because its power lies here, in the eternal darkness. In the life of a people who only maintain themselves in darkness and who accept no strangers. Who accept no one who tries to break the sky.
+&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 54s&gt;&gt;
-Cuando ya no queda nada de ti, la multitud se dispersa en silencio. El sacerdote apaga su farol y se pierde entre las sombras.&lt;&lt;/timed&gt;&gt;
+When nothing remains of you, the crowd silently disperses. The priest extinguishes his lantern and disappears into the shadows.
+&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 60s&gt;&gt;
 
-&#39;&#39;FIN — ¿Quién era quién?&#39;&#39;
+&#39;&#39;END — Who was who?&#39;&#39;
 
 
-[[Conocer las consecuencias de tus decisiones-&gt;Consecuencias final]]&lt;&lt;/timed&gt;&gt;
+[[Let&#39;s travel again-&gt;Comenzar viaje bus]]&lt;&lt;/timed&gt;&gt;
 &lt;&lt;set $cordura -= 10&gt;&gt;&lt;&lt;set $sobrenatural += 10&gt;&gt;&lt;&lt;set $entender += 20&gt;&gt;
 &lt;&lt;audio &quot;doble&quot; stop&gt;&gt;&lt;&lt;audio &quot;final&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Comenzar viaje bus" tags="" position="1325,900" size="100,100">A sharp pain throbs in your temple, as if something were pressing from within.
 &lt;&lt;timed 8s&gt;&gt;
@@ -1867,7 +1873,7 @@ The inside of the bus is empty.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 22s&gt;&gt;
 Only you and your brown suitcase with worn corners occupy the back seats.&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 30s&gt;&gt;
-&#39;&#39;What are you up for doing?&#39;&#39;
+&#39;&#39;What are you up for doing?&#39;&#39;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 33s&gt;&gt;
 &lt;&lt;link &quot;Look through the window&quot;&gt;&gt;&lt;&lt;goto &quot;Mirar por la ventana&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Talk to the driver&quot;&gt;&gt;&lt;&lt;goto &quot;Hablar con el conductor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
